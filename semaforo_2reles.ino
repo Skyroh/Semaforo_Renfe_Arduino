@@ -20,31 +20,31 @@ int relay2 = 3;
 
 // Configuración
 void setup() {
-  pinMode(relay1, OUTPUT); // Configuramos que el primer relé es una salida o OUTPUT.
-  pinMode(relay2, OUTPUT); // Configuramos que el segundo relé es una salida o OUTPUT.
-  Serial.begin(9600); // Abrir el puerto serie a la velocidad de 9600bps para trasnmicion de datos.
+  pinMode(relay1, OUTPUT); // Configuramos que el primer relé es una salida o OUTPUT de la placa, pin "D2".
+  pinMode(relay2, OUTPUT); // Configuramos que el segundo relé es una salida o OUTPUT de la placa, pin "D3".
+  Serial.begin(9600); // Abrir el puerto serie a la velocidad de 9600bpspara transferencia de datos.
 }
 
+
+// Código principal en búcle infinito
 void loop() {
-  // Código principal del búcle
+
+   // Encendido del relé número 1
+  digitalWrite(relay1, HIGH); // Envia señal alta (5V) al primer relé.
+  Serial.println("Relé numero 1 encendido");
+  delay(45000);           // 45 segundo encendido 
+   // Apagado del relé número 1
+  digitalWrite(relay1, LOW);  // Envia señal baja (0V) al primer relé.
+  Serial.println("Relé 1 apagado");
+  delay(3000);           // 3 segundos apagado
 
 
-  // Accionamiento del relé número 1
-  digitalWrite(relay1, HIGH); // envia señal alta al primer relé
-  Serial.println("Relay numero 1 accionado");
-  delay(45000);           // 45 segundo
-  
-  digitalWrite(relay1, LOW);  // envia señal baja al relé número uno.
-  Serial.println("Relay 1 no accionado");
-  delay(3000);           // 3 segundo
-
-
-  // Accionamiento del relé número 2 
-  digitalWrite(relay2, HIGH); // envia señal alta al segudo relé
-  Serial.println("Relay numero 2 accionado");
-  delay(45000);           // 45 segundo
-  
-  digitalWrite(relay2, LOW);  // envia señal baja al relé número dos.
-  Serial.println("Relay 2 no accionado");
-  delay(3000);           // 3 segundo
+  // Encendido del relé número 2 
+  digitalWrite(relay2, HIGH); // Envia señal alta (5V) al segundo relé.
+  Serial.println("Relé numero 2 encendido");
+  delay(45000);           // 45 segundos encendido
+  // Apagado del relé número 2
+  digitalWrite(relay2, LOW);  // Envia señal baja (0V) al relé número dos.
+  Serial.println("Relé 2 apagado");
+  delay(3000);           // 3 segundos apagado
 }
