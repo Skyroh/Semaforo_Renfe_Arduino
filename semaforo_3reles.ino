@@ -47,17 +47,7 @@ void loop() {
   Serial.println("Relé 3 apagado");
   delay(3000);           // 3 segundos apagado.
 
-  // Encendido del relé número 2 (Luz Roja)
-  digitalWrite(relay2, HIGH); // Envia señal alta (5V) al segundo relé.
-  Serial.println("Relé numero 2 encendido");
-  delay(45000);           // 45 segundos encendido
-  // Apagado del relé número 2
-  digitalWrite(relay2, LOW);  // Envia señal baja (0V) al relé número dos.
-  Serial.println("Relé 2 apagado");
-  delay(3000);           // 3 segundos apagado
-
-
-// Encendido de 2 relés (Luz verde y amarilla)
+// Encendido de 2 relés (Luz verde y roja)
   digitalWrite(relay1, HIGH); // Envia señal alta (5V) al primer relé.
   digitalWrite(relay3, HIGH); // Envia señal alta (5V) al tercer relé.
   Serial.println("Relé numero 1 y número 3 encendidos");
@@ -68,5 +58,14 @@ void loop() {
   digitalWrite(relay3, LOW);  // Envia señal baja (0V) al relé número tres.
   Serial.println("Relé 1 y 3 apagados");
   delay(3000);           // 3 segundo
+
+  // Encendido del relé número 2 (Luz Roja)
+  digitalWrite(relay2, HIGH); // Envia señal alta (5V) al segundo relé.
+  Serial.println("Relé numero 2 encendido");
+  delay(45000);           // 45 segundos encendido
+  // Apagado del relé número 2
+  digitalWrite(relay2, LOW);  // Envia señal baja (0V) al relé número dos.
+  Serial.println("Relé 2 apagado");
+  delay(3000);           // 3 segundos apagado
 
 }
