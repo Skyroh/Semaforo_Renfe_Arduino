@@ -29,7 +29,7 @@ void setup() {
 
  // Código principal en búcle infinito
 void loop() {
-  // Encendido del relé número 1
+  // Encendido del relé número 1 (Luz verde)
   digitalWrite(relay1, HIGH); // Envia señal alta (5V) al primer relé.
   Serial.println("Relé numero 1 encendido");
   delay(45000);           // 45 segundo encendido 
@@ -38,8 +38,16 @@ void loop() {
   Serial.println("Relé 1 apagado");
   delay(3000);           // 3 segundos apagado
 
+  // Encendido del relé número 3 (Luz Amarilla)
+  digitalWrite(relay3, HIGH); // Envia señal alta (5V) al tercer relé.
+  Serial.println("Relé numero 3 encendido");
+  delay(45000);           // 45 segundos encendido.
+  // Apagado del relé número 3
+  digitalWrite(relay3, LOW);  // Envia señal baja (0V) al relé número tres.
+  Serial.println("Relé 3 apagado");
+  delay(3000);           // 3 segundos apagado.
 
-  // Encendido del relé número 2 
+  // Encendido del relé número 2 (Luz Roja)
   digitalWrite(relay2, HIGH); // Envia señal alta (5V) al segundo relé.
   Serial.println("Relé numero 2 encendido");
   delay(45000);           // 45 segundos encendido
@@ -49,17 +57,7 @@ void loop() {
   delay(3000);           // 3 segundos apagado
 
 
-  // Encendido del relé número 3 
-  digitalWrite(relay3, HIGH); // Envia señal alta (5V) al tercer relé.
-  Serial.println("Relé numero 3 encendido");
-  delay(45000);           // 45 segundos encendido.
-  // Apagado del relé número 3
-  digitalWrite(relay3, LOW);  // Envia señal baja (0V) al relé número tres.
-  Serial.println("Relé 3 apagado");
-  delay(3000);           // 3 segundos apagado.
-
-
-// Encendido de 2 relés
+// Encendido de 2 relés (Luz verde y amarilla)
   digitalWrite(relay1, HIGH); // Envia señal alta (5V) al primer relé.
   digitalWrite(relay3, HIGH); // Envia señal alta (5V) al tercer relé.
   Serial.println("Relé numero 1 y número 3 encendidos");
@@ -70,7 +68,5 @@ void loop() {
   digitalWrite(relay3, LOW);  // Envia señal baja (0V) al relé número tres.
   Serial.println("Relé 1 y 3 apagados");
   delay(3000);           // 3 segundo
-
-
 
 }
