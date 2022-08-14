@@ -30,21 +30,21 @@ void setup() {
 void loop() {
 
    // Encendido del relé número 1
-  digitalWrite(relay1, HIGH); // Envia señal alta (5V) al primer relé.
+  digitalWrite(relay1, LOW); // Envia señal BAJA (0V) al primer relé.
   Serial.println("Relé numero 1 encendido");
   delay(45000);           // 45 segundo encendido 
    // Apagado del relé número 1
-  digitalWrite(relay1, LOW);  // Envia señal baja (0V) al primer relé.
+  digitalWrite(relay1, HIGH);  // Envia señal ALTA (5V) al primer relé.
   Serial.println("Relé 1 apagado");
   delay(3000);           // 3 segundos apagado
 
 
   // Encendido del relé número 2 
-  digitalWrite(relay2, HIGH); // Envia señal alta (5V) al segundo relé.
+  digitalWrite(relay2, LOW); // Envia señal BAJA (0V) al segundo relé.
   Serial.println("Relé numero 2 encendido");
   delay(45000);           // 45 segundos encendido
   // Apagado del relé número 2
-  digitalWrite(relay2, LOW);  // Envia señal baja (0V) al relé número dos.
+  digitalWrite(relay2, HIGH);  // Envia señal ALTA (5V) al relé número dos.
   Serial.println("Relé 2 apagado");
   delay(3000);           // 3 segundos apagado
 }
