@@ -31,6 +31,12 @@ void setup() {
 
  // Código principal en búcle infinito
 void loop() {
+  //Empezamos con los relés apagados
+  digitalWrite(relay1, HIGH);  // Envia señal ALTA (5V) al primer relé.
+  digitalWrite(relay2, HIGH);  // Envia señal ALTA (5V) al relé número dos.
+  digitalWrite(relay3, HIGH);  // Envia señal ALTA (5V) al relé número tres.
+  delay(3000);
+  
   // Encendido del relé número 1 (Luz verde)
   digitalWrite(relay1, LOW); // Envia señal BAJA (0V) al primer relé.
   Serial.println("Relé numero 1 encendido (Luz Verde)");
@@ -68,5 +74,4 @@ void loop() {
   // Apagado del relé número 2
   digitalWrite(relay2, HIGH);  // Envia señal ALTA (5V) al relé número dos.
   Serial.println("Relé 2 apagado (Luz Roja)");
-  delay(3000);           // 3 segundos apagado
 }
