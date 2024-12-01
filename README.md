@@ -1,6 +1,7 @@
 <h1>Semaforo_Renfe_Arduino</h1>
 
 Semaforo_Renfe_Arduino es un proyecto realizado con dos o tres tipos de relés para conmutar las bombillas para simular un semáforo ferroviario.  
+Proyecto realizado para "Associació dels Amics del Ferrocarril de Martorell" 
 
 <h2>1- Relé con 2 actuadores.</h2>
 
